@@ -1,58 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, {useRef, useState} from 'react';
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import HomePage from './Pages/HomePage';
+import ExamplePage from './Pages/ExamplePage';
+import CustomHookPage from './Pages/CustomHookPage';
 import './App.css';
 
+
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        
-        <p>
-          React Lesson On 11_04_2022
-          Yosef LEvy
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+       <BrowserRouter>
+       <Switch>
+          <Route path='/' render={() => <HomePage/>} exact={true}/>
+          <Route path='/example' render={() => <ExamplePage/>} exact={true}/>
+          <Route path='/fetch' render={() => <CustomHookPage url={"https://jsonplaceholder.typicode.com/posts?_start=1&_limit=2"}/>} exact={true}/>
+       </Switch>
+       </BrowserRouter>
+    </>
   );
 }
 
