@@ -1,0 +1,12 @@
+h1{
+    color:red;
+    margin-left: 150px;
+}
+p{
+    color: rgb(12, 72, 72);
+}
+.left{
+    margin-left: 25px;
+    color: cyan;
+    background-color: black;
+}

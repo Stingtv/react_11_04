@@ -1,0 +1,11 @@
+h1{
+    color:red;
+    margin-left: 150px;
+}
+p{
+    color: rgb(14, 44, 44);
+}
+.left{
+    margin-left: 200px;
+    color: blueviolet;
+}

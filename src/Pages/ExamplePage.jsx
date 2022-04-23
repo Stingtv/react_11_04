@@ -2,6 +2,8 @@ import React from 'react'
 import Child from '../Components/Child';
 import {useRef,useState} from 'react'
 import {Link} from 'react-router-dom';
+import ChildCSS from '../Components/DemoCSS/ChildCSS';
+import DemoStyled from '../Components/DemoStyled/DemoStyled';
 
 function ExamplePage() {
     const inputRef = useRef();
@@ -51,8 +53,42 @@ function ExamplePage() {
       <p><b>useFetch</b> will recive URL and return [data, isFetching,api] </p>
       <p>hook is a simple JS function that return some object that we can use</p>
       <p>We are using:</p>
-      <ul><li> useState for the data</li><li>useState for the loader state</li>api an access to the fetch fuctions<li></li></ul>
+      <ul><li> useState for the data</li><li>useState for the loader state</li><li>api an access to the fetch fuctions</li></ul>
+      <hr></hr>
+      <h2>React css</h2>
+      <h3>Inline Style</h3>
+      <p>style={"{object of css rpoperties} ex: {prop1: value1, prop2: value2}"}</p>
+      <p>React css prop are similar to css .<b>BUT:</b> {"if you have hypen sign like margin-top it become marginTop"}</p>
+      <p style={{marginLeft:'100px',color:'red'}}>My style {"marginLeft:'100px',color:'red'"} </p>
+      <hr></hr>
+      <h3>css file for component</h3>
+      <ChildCSS option={1}/>
+      <hr></hr>
+      <h3><b>css module for define style for specific component</b></h3>
+      <p>In the regular css it considering global, therefor can affect othe components</p>
+      <p><u>To define specific componet css we need</u></p>
+      <ul><li>create css in the folowing: <b>{'"component name".module.css'}</b></li>
+      <li>importing: <b>{'import style from "the css file"'}</b></li>
+      <li>using: {"className=style.left (where left is the class name in the  file)"}</li>
+      </ul>
+      <ChildCSS option={2}/>
+      <hr></hr>
+       <h3>Styled Component libary</h3>
+       <p><b>link to site:</b> https://styled-components.com/</p>
+       <p><b>link to npm:</b> https://www.npmjs.com/package/styled-components</p>
+       <p>Enable clean code with not alot classes in the code.</p>
+       <p>the Style is became a componet</p>
+       <p><b>npm:</b> npm install styled-components</p>
+       <p><b>file name:</b> "Componenet name".style.js</p>
+       <p><b>inport:</b> import styled from 'styled-components'</p>
+       <p><b>Create:</b></p>
+       <p>const Title = styled.h1`</p>
+       <p>here you put regular css code</p>
+       <p>`;</p>
+       <DemoStyled/>
 
+
+      
     </header>
   </div>
   )
