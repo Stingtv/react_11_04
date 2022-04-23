@@ -86,8 +86,19 @@ function ExamplePage() {
        <p>here you put regular css code</p>
        <p>`;</p>
        <DemoStyled/>
-
-
+        <hr></hr>
+        <h2>Summary</h2>
+        <p>learn all the basic blockes we learned</p>
+        <h3>Resources</h3>
+        <ul>
+          <li>
+            Move faster with intuitive React UI tools: https://mui.com/
+            <p>We use a built in complete COMPONENTS</p>
+            </li>
+          <li>tailwindcss : https://tailwindcss.com/
+            <p>css libary like bootstrup, bu more popular</p>
+          </li>
+        </ul>
       
     </header>
   </div>

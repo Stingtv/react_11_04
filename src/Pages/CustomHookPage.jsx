@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import useFetch from '../Hooks/useFetch'
 import ClipLoader from 'react-spinners/ClipLoader';
-
+import {Link} from 'react-router-dom';
 function CustomHookPage(props) {
     const [data,isFetching,api] = useFetch(props.url);
     let [color,setColor] = useState("#ffeeff")
@@ -14,7 +14,9 @@ const Add = (title) =>{
     api.POST(title)
 }
   return (
-    <div><h1>CustomHookPage</h1>
+    <div>
+        <Link to='/'>back Home</Link>
+        <h1>CustomHookPage</h1>
         <p>our useFetch expose api, right now we implement:</p>
         <ul><li>api.GET() for getting list of data</li><li>api.POST(title) to add new item</li></ul>
         
